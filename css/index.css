@@ -1,0 +1,79 @@
+header {
+    display: flex;
+    justify-content: space-between; 
+    background-color: #4682B4; 
+    border-bottom: 10px solid #000; 
+    padding: 10px 20px;
+    align-items: center; /* Irá centralizar os flex-itens */
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    margin-left: 25px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #00FA9A; /* #F25A70 */
+    object-fit: cover;
+}
+
+h1 {
+    font-family: 'Press Start 2P';
+    color: #FFF;
+    text-shadow: 5px 5px 0px #000;
+    margin-left: 25px;
+    display: inline;
+    text-align: center;
+}
+
+nav {
+    text-align: right;
+    margin-right: 25px;
+}
+
+a {
+    display: inline-flex;
+    align-items: center;
+    color: #FFF;
+    font-size: 20px;
+    font-family: "Fira Code", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-decoration: none; 
+    margin-right: 30px;  /* Irá criar um espaçamento entre os links a direita */
+}
+
+a::before {
+    content: '';
+    /* display: inline-block; usar caso não tenha o display flex */
+    width: 10px;
+    height: 10px;
+    background-color: #00FA9A; /* #F25A70  */
+    border-radius: 5px; /* Remover depois */
+    margin-right: 10px;
+    margin-bottom: 2.5px;
+}
+
+a:hover {
+    border-bottom: 2px solid #00FA9A;
+}
+
+#button {
+    border-bottom: none; /* Tem que colocar para o a:hover não afetar o botão */
+    display: inline-block;
+    background-color: #00FA9A; 
+    padding: 18px 20px;
+    box-shadow: 5px 5px 0 black;
+    /* Irá copiar a caixa toda, vai fazer uma cópia colocando ela atrás e fazendo uma sombra */
+    margin-right: 0;
+    /* Aqui estou removendo o margin-right de 30px que coloquei nos links em geral */
+    border-radius: 5px;
+    transition: transform 200ms linear; /* Colocando aqui ele irá animar nos dois momentos */
+}
+
+#button:hover {
+    transform: scale(1.08); /* Irá aumentar o tamanho do elemento ao passar o mouse em cima */
+}
